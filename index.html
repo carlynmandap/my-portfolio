@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realyn | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Reenie+Beanie&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Home Icon -->
+    <a href="index.html" class="home-icon" title="Back to Main">
+        <img src="images/home-icon.png" alt="Home" class="zoom-icon">
+    </a>
+
+    <!-- Title -->
+    <h1>Realyn's Portfolio</h1>
+
+    <!-- Intro Text -->
+    <p class="intro-text">
+        Hi, I’m a Senior Software Engineer - Welcome to my space!
+    </p>
+    <p class="intro-text">
+        I won’t talk about work here, but I’m excited to show
+        you the playful, creative side of what I do.
+    </p>
+
+    <div class="computer-container">
+        <img src="images/computer.png" alt="Computer" class="computer-img" onclick="toggleFolders()">
+
+        <div class="click-text">Click me</div>
+
+        <a href="pages/projects.html" class="folder-container circle circle1">
+            <img src="images/folder.png" alt="Folder" class="folder">
+            <div class="folder-label">Projects</div>
+        </a>
+
+        <a href="pages/resume.html" class="folder-container circle circle2">
+            <img src="images/folder.png" alt="Folder" class="folder">
+            <div class="folder-label">Resume</div>
+        </a>
+
+        <a href="pages/blog.html" class="folder-container circle circle3">
+            <img src="images/folder.png" alt="Folder" class="folder">
+            <div class="folder-label">Blog</div>
+        </a>
+
+        <a href="pages/contact.html" class="folder-container circle circle4">
+            <img src="images/folder.png" alt="Folder" class="folder">
+            <div class="folder-label">Contact</div>
+        </a>
+    </div>
+
+
+    <!-- Script -->
+    <script>
+        function toggleFolders() {
+            const folders = document.querySelectorAll('.folder-container');
+            folders.forEach(folder => folder.classList.toggle('show'));
+        }
+
+    </script>
+
+</body>
+
+</html>

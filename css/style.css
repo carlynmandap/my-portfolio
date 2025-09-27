@@ -1,0 +1,142 @@
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+    }
+
+    h1 {
+        margin-top: 60px;
+        font-size: 2.8rem;
+        font-family: 'Marck Script', cursive;
+        color: #333;
+    }
+
+    .intro-text {
+        margin: 20px auto;
+        font-size: 2rem;
+        color: #555;
+        font-family: "Reenie Beanie", cursive;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .computer-container {
+        position: relative;
+        display: inline-block;
+        width: 360px;
+        /* increase from 300px */
+        height: 360px;
+        /* increase from 300px */
+    }
+
+    .computer-img {
+        width: 250px;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -40%);
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .click-text {
+        position: absolute;
+        top: 40%;
+        /* Adjust vertical position as needed */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        user-select: none;
+        z-index: 10;
+        /* Make sure it’s on top */
+        pointer-events: none;
+        /* Let clicks pass through if you want folders clickable */
+    }
+
+    .folder-container {
+        display: inline-block;
+        /* or block */
+        text-decoration: none;
+        color: inherit;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(0, 0) scale(0.3);
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        text-align: center;
+        width: 70px;
+        cursor: pointer;
+    }
+
+    .folder-container:hover {
+        /* Optional: add some hover effect */
+        transform: scale(1.1);
+    }
+
+
+    /* Show state */
+    .folder-container.show {
+        opacity: 1;
+        scale: 1;
+    }
+
+    /* Folder image inside container */
+    .folder-container .folder {
+        width: 100px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Label text */
+    .folder-label {
+        margin-top: 6px;
+        font-size: 0.9rem;
+        color: #333;
+        font-weight: 600;
+        font-family: Arial, sans-serif;
+        user-select: none;
+        pointer-events: none;
+    }
+
+    .circle1.show {
+        transform: rotate(0deg) translate(200px) rotate(0deg) scale(1);
+    }
+
+    .circle2.show {
+        transform: rotate(60deg) translate(200px) rotate(-60deg) scale(1);
+    }
+
+    .circle3.show {
+        transform: rotate(140deg) translate(280px) rotate(-140deg) scale(1);
+    }
+
+    .circle4.show {
+        transform: rotate(180deg) translate(300px) rotate(-180deg) scale(1);
+    }
+
+    .home-icon {
+        position: fixed;
+        top: 1.25rem;
+        left: 1.25rem;
+        padding: 0.5rem 0.75rem;
+        z-index: 2000;
+    }
+
+    .home-icon img {
+        width: 3.5rem;
+        height: 3.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    .zoom-icon {
+        width: 40px;
+        transition: transform 0.2s ease;
+    }
+
+    .zoom-icon:hover {
+        transform: scale(1.1);
+    }
