@@ -1,0 +1,265 @@
+:root {
+    --accent: #f8a5b3;
+    --bg: #fff;
+    --text: #333;
+    --border: #f0f0f0;
+    --shadow: rgba(0, 0, 0, 0.05);
+    --font: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--bg);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.header-content {
+    display: flex;
+    align-items: flex-start;
+    /* top-align avatar and details */
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    /* prevent avatar from jumping on top */
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.header-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.name-row {
+    display: flex;
+    justify-content: space-between;
+    /* name left, button right */
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+.title,
+.location {
+    font-size: 1rem;
+    color: #777;
+    transition: color 0.3s ease;
+}
+
+/* ---------- BUTTONS ---------- */
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.btn {
+    border: 1px solid var(--accent);
+    padding: 0.3rem 0.5rem;
+    border-radius: 10px;
+    color: var(--accent);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 100;
+    font-size: 0.8rem;
+}
+
+.btn.primary {
+    background-color: var(--accent);
+    color: #fff;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* ---------- DARK MODE TOGGLE ---------- */
+.dark-toggle {
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-toggle:hover {
+    opacity: 0.8;
+}
+
+/* ---------- LAYOUT ---------- */
+.container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 4rem;
+}
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .dark-toggle {
+        width: 55px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+/* ---------- CARDS ---------- */
+.card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 10px var(--shadow);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+h2 {
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* ---------- TAGS ---------- */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tags span {
+    background-color: #ffe5ec;
+    color: #444;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* ---------- TIMELINE ---------- */
+.timeline {
+    position: relative;
+    margin-left: 1rem;
+    border-left: 2px solid var(--accent);
+    padding-left: 1rem;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-item .dot {
+    position: absolute;
+    left: -1.2rem;
+    top: 0.4rem;
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent);
+    border-radius: 50%;
+}
+
+.company {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    transition: color 0.3s ease;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 1px solid var(--border);
+    color: #777;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.footer .socials {
+    margin-bottom: 0.75rem;
+}
+
+.footer .socials a {
+    color: var(--accent);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer .socials a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- HOME ICON ---------- */
+.home-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    z-index: 1000;
+}
+
+.home-icon img {
+    width: 35px;
+    height: 35px;
+    filter: grayscale(100%) opacity(0.8);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.home-icon:hover img {
+    transform: scale(1.1);
+    filter: hue-rotate(310deg) brightness(1.1);
+}
+
+/* ---------- DARK MODE VARIABLES ---------- */
+body.dark-mode {
+    --bg: #1e1e1e;
+    --text: #eee;
+    --border: #333;
+    --shadow: rgba(0, 0, 0, 0.3);
+}
