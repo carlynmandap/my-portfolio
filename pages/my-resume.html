@@ -18,7 +18,7 @@
     <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <img src="../images/section3.jpeg" alt="Profile" class="avatar">
+            <img src="../images/avatar-light.JPEG" alt="Profile" class="avatar">
 
             <div class="header-details">
                 <div class="name-title">
@@ -54,9 +54,17 @@
             <section class="card about">
                 <h2>About</h2>
                 <p>
-                    I’m a passionate software engineer focused on building efficient, scalable, and user-friendly
-                    applications.
-                    I enjoy transforming ideas into reality through clean code and thoughtful design.
+                    I'm a Senior Software Engineer with over six years of experience building and scaling cloud-based
+                    solutions. I started my journey in application development and later found my niche in cloud
+                    platform engineering, where I’ve spent the past five years focusing on Microsoft Azure.
+                    <br>
+                    <br>
+                    I design and implement secure, efficient, and scalable architectures — from automating
+                    infrastructure provisioning with Infrastructure as Code (IaC) to integrating DevOps practices that
+                    streamline enterprise systems.
+                    <br>
+                    <br>
+                    I’m passionate about creating technology that empowers teams to move faster and smarter.
                 </p>
             </section>
 
@@ -64,27 +72,35 @@
             <section class="card techstack">
                 <h2>Tech Stack</h2>
                 <div class="stack-category">
-                    <h4>Frontend</h4>
+                    <h4>Cloud</h4>
                     <div class="tags">
-                        <span>JavaScript</span><span>React</span><span>Next.js</span><span>Tailwind CSS</span>
+                        <span>Microsoft Azure</span><span>AWS</span><span>Google Cloud Platform
+                            (GCP)</span>
                     </div>
                 </div>
                 <div class="stack-category">
-                    <h4>Backend</h4>
+                    <h4>Infrastructure and Automation</h4>
                     <div class="tags">
-                        <span>Node.js</span><span>Python</span><span>PHP</span><span>PostgreSQL</span>
+                        <span>Azure DevOps</span><span>Terraform</span><span>CI/CD</span><span>Agile</span>
                     </div>
                 </div>
                 <div class="stack-category">
-                    <h4>DevOps & Cloud</h4>
+                    <h4>Programming</h4>
                     <div class="tags">
-                        <span>AWS</span><span>Docker</span><span>Kubernetes</span>
+                        <span>Python</span><span>C#</span><span>NodeJS</span><span>PowerShell</span>
+                    </div>
+                </div>
+                <div class="stack-category">
+                    <h4>Data & AI</h4>
+                    <div class="tags">
+                        <span>Generative AI</span><span>Amazon
+                            Bedrock</span><span>OpenAI</span><span>SQL</span><span>NoSQL</span>
                     </div>
                 </div>
             </section>
 
             <!-- Projects -->
-            <section class="card projects">
+            <!-- <section class="card projects">
                 <h2>Projects</h2>
                 <div class="project">
                     <h3>Project One</h3>
@@ -94,7 +110,7 @@
                     <h3>Project Two</h3>
                     <p>Short project description — technologies used and main purpose.</p>
                 </div>
-            </section>
+            </section> -->
         </div>
 
         <!-- RIGHT COLUMN -->
@@ -106,17 +122,22 @@
                     <div class="timeline-item">
                         <div class="dot"></div>
                         <div class="content">
-                            <h3>Software Engineer</h3>
-                            <p class="company">[Company Name] • 2025</p>
-                            <p>Developed web applications and implemented efficient API integrations.</p>
+                            <h3>Cloud Platform Engineer</h3>
+                            <p class="company">Accenture • Present</p>
                         </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="dot"></div>
+                        <!-- <div class="dot"></div> -->
                         <div class="content">
-                            <h3>Frontend Developer</h3>
-                            <p class="company">[Company Name] • 2024</p>
-                            <p>Created responsive, accessible, and elegant interfaces with a focus on UX.</p>
+                            <h3>Application Developer</h3>
+                            <p class="company">Accenture • June 2019</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <!-- <div class="dot"></div> -->
+                        <div class="content">
+                            <h3>BS Information Technology</h3>
+                            <p class="company">Universidad De Manila • 2019</p>
                         </div>
                     </div>
                 </div>
@@ -126,19 +147,21 @@
             <section class="card certifications">
                 <h2>Certifications</h2>
                 <ul>
-                    <li>Certified Web Developer – [Institution]</li>
-                    <li>Cloud Practitioner – [Provider]</li>
+                    <li>Microsoft Certified: Azure AI Engineer (AI-102) – June 2025</li>
+                    <li>Microsoft Certified: Azure AI Fundamentals (AI-900) – June 2024</li>
+                    <li>Microsoft Certified: Azure Data Engineer Associates (DP-203) – February 2024</li>
+                    <li>Microsoft Certified: Azure Data Fundamentals (DP-900) – February 2023</li>
+                    <li>Microsoft Certified: Azure Fundamentals (AZ-900) – September 2021</li>
+                    <li>Agie Professional Certified – June 2021</li>
                 </ul>
             </section>
 
             <!-- Recommendations -->
             <section class="card recommendations">
-                <h2>Recommendations</h2>
-                <blockquote>
-                    “Realyn is a talented engineer with an eye for detail and a passion for creating meaningful user
-                    experiences.”
-                </blockquote>
-                <p class="cite">– [Name], [Role]</p>
+                <h2>Beyond Coding</h2>
+                <p>
+                    I enjoy mobile gaming and web design, combining creativity with analytical problem-solving.
+                </p>
             </section>
         </div>
     </main>
@@ -154,18 +177,61 @@
 
     <script>
         const toggleBtn = document.getElementById('darkModeToggle');
-        toggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
+        const body = document.body;
+        const avatar = document.querySelector('.avatar');
 
-            // Change button icon
-            if (document.body.classList.contains('dark-mode')) {
-                toggleBtn.textContent = '☀️'; // sun icon in dark mode
-            } else {
-                toggleBtn.textContent = '🌙'; // moon icon in light mode
+        // Avatar image paths
+        const images = {
+            light: {
+                default: "../images/avatar-light.jpeg",
+                hover: "../images/avatar2-light.jpeg"
+            },
+            dark: {
+                default: "../images/avatar-dark.jpeg",
+                hover: "../images/avatar2-dark.jpeg"
             }
+        };
+
+        // Get stored theme from localStorage
+        function getStoredTheme() {
+            return localStorage.getItem('theme') || 'light';
+        }
+
+        // Set theme class and avatar
+        function applyTheme(theme) {
+            if (theme === 'dark') {
+                body.classList.add('dark-mode');
+                toggleBtn.textContent = '☀️';
+                avatar.src = images.dark.default;
+            } else {
+                body.classList.remove('dark-mode');
+                toggleBtn.textContent = '🌙';
+                avatar.src = images.light.default;
+            }
+        }
+
+        // Initialize theme on page load
+        applyTheme(getStoredTheme());
+
+        // Toggle dark/light mode
+        toggleBtn.addEventListener('click', () => {
+            const isDark = body.classList.toggle('dark-mode');
+            const theme = isDark ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+            applyTheme(theme);
+        });
+
+        // Hover effect for avatar
+        avatar.addEventListener('mouseenter', () => {
+            const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+            avatar.src = images[theme].hover;
+        });
+
+        avatar.addEventListener('mouseleave', () => {
+            const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+            avatar.src = images[theme].default;
         });
     </script>
-
 </body>
 
 </html>
