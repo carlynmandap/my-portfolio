@@ -45,8 +45,8 @@ body {
 }
 
 .avatar {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     border-radius: 5px;
     object-fit: cover;
 }
@@ -159,6 +159,12 @@ h1 {
     transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+
 h2 {
     color: var(--accent);
     font-size: 1.1rem;
@@ -170,6 +176,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .tags span {
@@ -262,4 +269,17 @@ body.dark-mode {
     --text: #eee;
     --border: #333;
     --shadow: rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .tags span {
+    background-color: #333;
+    color: #fff;
+}
+
+a {
+    color: var(--accent);
+}
+
+body.dark-mode a {
+    color: #fbb6c2;
 }
