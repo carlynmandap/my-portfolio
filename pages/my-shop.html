@@ -4,24 +4,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realyn | Shop</title>
+    <title>Realyn | Cute Shop</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Reenie+Beanie&display=swap"
+    <link rel="stylesheet" href="css/my-shop.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Fredoka:wght@400;500;600&display=swap"
         rel="stylesheet">
-    <style>
-        body {
-            background-image: url('../images/under-cons.jpg');
-        }
-    </style>
 </head>
 
-<body>
+<body class="shop-theme">
 
     <!-- Home Icon -->
     <a href="../index.html" class="home-icon" title="Back to Main">
         <img src="../images/home-icon.png" alt="Home" class="zoom-icon">
     </a>
 
+    <!-- Header -->
+    <header class="shop-header">
+        <div class="header-content">
+            <h1 class="shop-title">✨ Realyn's Cute Shop ✨</h1>
+            <p class="shop-subtitle">Cozy Clothing & Accessories 💕</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="shop-container">
+        <!-- Filter/Category Bar -->
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All Items</button>
+            <button class="filter-btn" data-filter="tops">Tops</button>
+            <button class="filter-btn" data-filter="bottoms">Bottoms</button>
+            <button class="filter-btn" data-filter="accessories">Accessories</button>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid">
+            <!-- Product Card 1 -->
+            <div class="product-card" data-category="tops">
+                <div class="product-image">
+                    <div class="placeholder-image">🎀</div>
+                    <span class="product-badge">New</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Pastel Pink Hoodie</h3>
+                    <p class="product-description">Soft & cozy oversized hoodie</p>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (12)</div>
+                    <div class="product-footer">
+                        <span class="product-price">$24.99</span>
+                        <button class="add-btn">💗 Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card" data-category="tops">
+                <div class="product-image">
+                    <div class="placeholder-image">👕</div>
+                    <span class="product-badge">Sale</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Cute Baby Tee</h3>
+                    <p class="product-description">Fitted baby pink t-shirt</p>
+                    <div class="product-rating">⭐⭐⭐⭐ (8)</div>
+                    <div class="product-footer">
+                        <span class="product-price">$14.99</span>
+                        <button class="add-btn">💗 Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card" data-category="bottoms">
+                <div class="product-image">
+                    <div class="placeholder-image">👖</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Pink Wide Leg Jeans</h3>
+                    <p class="product-description">Trendy colored denim</p>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (15)</div>
+                    <div class="product-footer">
+                        <span class="product-price">$32.99</span>
+                        <button class="add-btn">💗 Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-image">
+                    <div class="placeholder-image">🎀</div>
+                    <span class="product-badge">Popular</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Cute Hair Clips Set</h3>
+                    <p class="product-description">Set of 5 pastel clips</p>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (24)</div>
+                    <div class="product-footer">
+                        <span class="product-price">$8.99</span>
+                        <button class="add-btn">💗 Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-image">
+                    <div class="placeholder-image">👜</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Mini Shoulder Bag</h3>
+                    <p class="product-description">Adorable pink crossbody bag</p>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (18)</div>
+                    <div class="product-footer">
+                        <span class="product-price">$28.99</span>
+                        <button class="add-btn">💗 Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="product-card" data-category="bottoms">
+                <div class="product-image">
+                    <div class="placeholder-image">🩱</div>
+                    <span class="product-badge">New</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Cute Shorts Set</h3>
+                    <p class="product-description">Matching biker shorts duo</p>
+                    <div class="product-rating">⭐⭐⭐⭐ (10)</div>
+                    <div class="product-footer">
+                        <span class="product-price">$18.99</span>
+                        <button class="add-btn">💗 Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="shop-footer">
+        <p>💝 Thanks for visiting my shop! 💝</p>
+        <p><small>All items are carefully curated with love 🎀</small></p>
+    </footer>
 
 </body>
 
